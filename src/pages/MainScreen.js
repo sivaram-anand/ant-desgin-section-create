@@ -1,52 +1,37 @@
 import React from "react";
-
 import { useSelector } from "react-redux/es/hooks/useSelector";
-import MainScreens from "./MainScreen.css";
+import "./MainScreen.css";
 import {
-	Breadcrumb,
-	Layout,
-	Menu,
 	theme,
 	Col,
 	Row,
 	Typography,
-	Section,
-	Space,
-	T,
 	Divider,
+	Image,
 } from "antd";
-import User from "./User";
-import img1 from "./img/img1.png";
-import img2 from "./img/img2.png";
-const { Title, Paragraph, Text, Link } = Typography;
-const { Header, Content, Footer, Sider } = Layout;
+import img1 from "../assets/img/img1.png";
+import img2 from "../assets/img/img2.png";
+const { Title, Paragraph } = Typography;
 
 const MainScreen = () => {
-	const user = useSelector((state) => state.user.value);
-	const {
-		token: { colorBgContainer },
-	} = theme.useToken();
+	const user = useSelector((state) => state.users.value);
 
 	return (
-		<Layout style={{ height: "100vh" }}>
 		<section className="entire-Container">
 			<Row>
 				<Col span={24}>
-					<Row>
-						<Col span={24} justify="end">
-							<Space>
-								{" "}
-								{/* <T></T>
-								<T></T> */}
-							</Space>
-							<Divider className="horizontal-line"></Divider>
+					<Row className="top-row" justify={"end"}>
+						<Col span={24}>
+							<Typography className="typo-username">{user}</Typography>
+							<Divider className="horizontal-line"/>
 						</Col>
 					</Row>
-					<Row justify="space-between" >
-						<Col span={12} className="middleleft">
+				
+					<Row justify="space-between" className="bottom-row" gutter={[32,16]}>
+						<Col span={12} className="first-col">
 							<Typography>
-								<Title className="middlelefthead">Lorem Ipsum Dolor</Title>
-								<Paragraph className="middleleftpara">
+								<Title className="first-title">Lorem Ipsum Dolor</Title>
+								<Paragraph className="para">
 									lLorem ipsum dolor sit amet, consectetur adipiscing elit,
 									sed do eiusmod tempor incididunt ut labore et dolore magna
 									aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -55,10 +40,10 @@ const MainScreen = () => {
 							</Typography>
 						</Col>
 
-						<Col span={6} className="firstpara" >
-							<img src={img1} height="200" border-radius="8px"></img>
+						<Col span={6} className="col" >
+							<Image src={img1} className="image"></Image>
 							<Typography>
-								<Paragraph className="firstparap">
+								<Paragraph className="para">
 									lLorem ipsum dolor sit amet, consectetur adipiscing elit,
 									sed do eiusmod tempor incididunt ut labore et dolore magna
 									aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -67,14 +52,14 @@ const MainScreen = () => {
 							</Typography>
 						</Col>
 
-						<Col span={6} className="secondndpara">
-							<img src={img2} height="200"></img>
+						<Col span={6} className="col">
+							<Image src={img2} className="image"></Image>
 							<Typography>
-								<Paragraph className="secondndparap">
+								<Paragraph className="para">
 									lLorem ipsum dolor sit amet, consectetur adipiscing elit,
 									sed do eiusmod tempor incididunt ut labore et dolore magna
 									aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-									ullamco laboris nisi ut aliquip ex ea commodo consequat.{" "}
+									ullamco laboris nisi ut aliquip ex ea commodo consequat.
 								</Paragraph>
 							</Typography>
 						</Col>
@@ -85,7 +70,7 @@ const MainScreen = () => {
 				</Col>
 			</Row>
 		</section>
-	</Layout>
+
 	);
 };
 

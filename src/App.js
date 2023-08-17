@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import LoginScreen from "./LoginScreen";
-import MainScreen from "./MainScreen";
+import LoginScreen from "./pages/LoginScreen";
+import MainScreen from "./pages/MainScreen";
 import "./App.css";
 
 function App() {

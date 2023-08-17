@@ -1,4 +1,4 @@
-.horizontal-line {
+/* .horizontal-line {
 	margin-top: 30px;
 	border: 2px solid rgb(0, 0, 0);
 	margin-left: 2vw;
@@ -61,9 +61,6 @@
 	font-size: 70px;
 	min-width: 160px;
 }
-/* .firstpara {
-	margin-left: 160px;
-} */
 
 .firstparap {
 	padding-top: 50px;
@@ -75,7 +72,7 @@
 	font-size: 18px;
 }
 @media only screen and (max-width: 1350px) {
-	/* For mobile phones: */
+
 	.middlesection {
 		display: flex;
 		flex-direction: column;
@@ -113,4 +110,38 @@
 		margin: auto;
 		width: 50%;
 	}
+} */
+
+
+.top-row{
+	padding: 10px;
+}
+.horizontal-line {
+	border: 2px solid rgb(0, 0, 0);
+}
+.typo-username{
+	font-size: 20px;
+	text-align: end;
+	color: burlywood;
+}
+.bottom-row{
+	padding: 20px;
+}
+
+.image{
+	width: 100%; 
+	height: auto;
+	border-radius: 8px;
+	margin-bottom: 10px; 
+}
+
+.para{
+	width: 100%; 
+	text-align: justify;
+}
+
+.col{ 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }

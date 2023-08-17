@@ -1,10 +1,11 @@
 import React from "react";
 import { Button, Checkbox, Form, Input } from "antd";
-import LoginScreens from "./LoginScreen.css";
+import "./LoginScreen.css";
 import { Navigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { login, logout } from "./User";
+import { login, logout } from "../store/reducers/User";
 import { useState } from "react";
+
 const LoginScreen = () => {
 	const onFinish = (values) => {
 		setGoToContact(true);
